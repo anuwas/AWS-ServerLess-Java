@@ -28,8 +28,7 @@ provider:
 # you can overwrite defaults here
   stage: dev
   region: ap-south-1
-  role:arn: aws:iam::179945620539:role/ServerLessUserRole
-
+  role:arn: ARN HERE
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
 #    role:
