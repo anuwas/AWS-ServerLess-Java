@@ -28,7 +28,7 @@ provider:
 # you can overwrite defaults here
   stage: dev
   region: ap-south-1
-  role:arn: aws:iam::179945620539:role/ServerLessUserRole
+  role: arn:aws:iam::179945620539:role/ServerLessUserRole
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
@@ -57,8 +57,12 @@ package:
   artifact: 'target/aws-java-serverless-api-dev.jar'
 
 functions:
-  listAPI:
-    handler: com.serverless.ListAPIHandler
+  bookList:
+    handler: com.serverless.BookListHandler
+    
+  addNewBook :
+    handler: com.serverless.AddNewBookHandler
+      
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
